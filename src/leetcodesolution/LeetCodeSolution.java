@@ -18,6 +18,9 @@ public class LeetCodeSolution {
         // TODO code application logic here
         
         int i = 0; 
+        
+        
+        
         System.out.println("Hello World");
     }
     
