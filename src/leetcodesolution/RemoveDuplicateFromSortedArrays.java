@@ -30,15 +30,19 @@ public class RemoveDuplicateFromSortedArrays {
     // Precondition array Should be sorted
     public int solution(int[] nums)
     {
-        int count = 1;
-        int prev = nums.length > 0 ? nums[0] : 0;
-        for(int i=1; i<nums.length; i++)
+        if(nums.length > 0)
         {
-            if(prev != nums[i])
-                count++;
-            prev = nums[i];
+            int count = 1;
+            int prev = nums[0];
+            for(int i=1; i<nums.length; i++)
+            {
+                if(prev != nums[i])
+                    count++;
+                prev = nums[i];
+            }
+            return count;
         }
-        return count;
+        return 0;
     }
         
       
