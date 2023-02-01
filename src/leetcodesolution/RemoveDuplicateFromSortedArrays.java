@@ -10,8 +10,36 @@ package leetcodesolution;
  * @author sanke
  */
 public class RemoveDuplicateFromSortedArrays {
-    public void Test()
-    {
-        System.out.println("Testing");
+
+    public RemoveDuplicateFromSortedArrays() {
     }
+    
+    // Array should be sorted 
+    // doesn't care about input array
+    public int bestSolution(int[] nums) {
+        int p = 0;
+        for(int i = 1 ; i < nums.length ; i++){
+            if(nums[p] != nums[i]){
+                nums[p+1] = nums[i];
+                p++;
+            }
+        }
+        return p + 1;
+    }
+      
+    // Precondition array Should be sorted
+    public int solution(int[] nums)
+    {
+        int count = 1;
+        int prev = nums.length > 0 ? nums[0] : 0;
+        for(int i=1; i<nums.length; i++)
+        {
+            if(prev != nums[i])
+                count++;
+            prev = nums[i];
+        }
+        return count;
+    }
+        
+      
 }

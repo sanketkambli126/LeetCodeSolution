@@ -17,11 +17,9 @@ public class LeetCodeSolution {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        int i = 0; 
-        
-        
-        
-        System.out.println("Hello World");
+        RemoveDuplicateFromSortedArrays soln = new RemoveDuplicateFromSortedArrays();
+        int[] a = { 1,1,5,6,8,8, 14, 16,17,18,19,20 };
+        System.out.println(soln.solution(a));
     }
     
 }
