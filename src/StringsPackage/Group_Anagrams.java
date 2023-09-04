@@ -43,7 +43,8 @@ public class Group_Anagrams {
 
     public static void main(String[] args) {
         System.out.println("hi");
-        groupAnagrams(List.of("yo", "act", "flop", "tac", "foo", "cat", "oy", "olfp"));
+        String[] arr = "yo,act,flop,tac,foo,cat,oy,olfp".split(","); 
+        groupAnagrams(Arrays.asList(arr));
     }
 
 }
